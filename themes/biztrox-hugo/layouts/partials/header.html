@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ .Site.Title }}</title>
+
+
+    {{ "<!-- mobile responsive meta -->" | safeHTML }}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    {{ range .Site.Params.meta }}
+    <meta name="{{ .name }}" content="{{ .content }}">
+    {{ end }}
+    {{ .Hugo.Generator }}
+
+    {{ "<!-- Bootstrap -->" | safeHTML }}
+    <link rel="stylesheet" href="{{ "plugins/bootstrap/bootstrap.min.css" | absURL }} ">
+    {{ "<!-- magnific popup -->" | safeHTML }}
+    <link rel="stylesheet" href="{{ "plugins/magnific-popup/magnific-popup.css" | absURL }} ">
+    {{ "<!-- Slick Carousel -->" | safeHTML }}
+    <link rel="stylesheet" href="{{ "plugins/slick/slick.css" | absURL }} ">
+    <link rel="stylesheet" href="{{ "plugins/slick/slick-theme.css" | absURL }} ">
+    {{ "<!-- themify icon -->" | safeHTML }}
+    <link rel="stylesheet" href="{{ "plugins/themify-icons/themify-icons.css" | absURL }} ">
+    {{ "<!-- animate -->" | safeHTML }}
+    <link rel="stylesheet" href="{{ "plugins/animate/animate.css" | absURL }} ">
+    {{ "<!-- Aos -->" | safeHTML }}
+    <link rel="stylesheet" href="{{ "plugins/aos/aos.css" | absURL }} ">
+    {{ "<!-- Stylesheets -->" | safeHTML }}
+    <link href="{{ "css/style.css" | absURL }} " rel="stylesheet">
+
+
+    {{ "<!-- Highlight -->" | safeHTML }}
+    <link rel="stylesheet" href="{{"plugins/highlight/tomorrow.css" | absURL}}" id="theme-stylesheet">
+    <script src="{{ "plugins/highlight/highlight.pack.js" | absURL }}"></script>
+    <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+    {{ "<!-- MathJax -->" | safeHTML }}
+    {{ if and (not .Params.disable_mathjax) (or (in (string .Content) "\\") (in (string .Content) "$")) }}
+    <script src="{{ "/js/math-code.js" | relURL }}"></script>
+    <script async src="{{ .Site.Params.MathJaxCDN | default "//cdnjs.cloudflare.com/ajax/libs" }}/mathjax/{{ .Site.Params.MathJaxVersion | default "2.7.5" }}/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    {{ end }}
+
+
+    {{ "<!--Favicon-->" | safeHTML }}
+    <link rel="shortcut icon" href="{{ "images/favicon.png" | absURL }} " type="image/x-icon">
+    <link rel="icon" href="{{ "images/favicon.png" | absURL }} " type="image/x-icon">
+
+</head>
+
+<body>
+
+
+    {{ "<!-- preloader start -->" | safeHTML }}
+    <div class="preloader">
+        <img src="{{ "images/preloader.gif" | absURL }} " alt="preloader">
+    </div>
+    {{ "<!-- preloader end -->" | safeHTML }}

@@ -1,0 +1,16 @@
+enable : true
+title : Contact Us
+formTitle : Contact Form
+btnText : Submit Now
+contactList :
+  - icon : ti-mobile
+    listItem1 : +32 065 37 34 97
+    listItem2 : +32 065 37 34 78
+
+  - icon : ti-email
+    listItem1 : sdd@sciviews.org
+    listItem2 : info@sciviews.org
+
+  - icon : ti-map-alt
+    listItem1 : 8 avenue du Champ de Mars
+    listItem2 : 7000 Mons, Belgium

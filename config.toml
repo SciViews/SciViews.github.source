@@ -1,0 +1,262 @@
+baseURL = "https://www.sciviews.org/"
+relativeURLs = true
+noTimes = true
+languageCode = "en-us"
+title = "SciViews"
+theme = "biztrox-hugo"
+summaryLength = "20"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+copyright = "This work is licensed under a Creative Commons Attribution 4.0 International License."
+#preserveTaxonomyNames = true
+#paginate = 10
+publishDir = "../SciViews.github.io"
+
+# navigation
+[menu]
+
+    [[menu.nav]]
+    name = "Software"
+    URL = "/software"
+    weight = 2
+
+    #[[menu.nav]]
+    #name = "Projects"
+    #URL = "/project"
+    #weight = 3
+
+    [[menu.nav]]
+    name = "Blog"
+    URL = "/blog"
+    weight = 4
+
+    [[menu.nav]]
+    name = "Course"
+    URL = "/course"
+    weight = 5
+
+    [[menu.nav]]
+    name = "Info"
+    hasChildren = true
+    weight = 6
+
+        [[menu.nav]]
+        parent = "Info"
+        name = "About"
+        URL = "/about"
+        weight = 7
+
+        [[menu.nav]]
+        parent = "Info"
+        name = "Team"
+        URL = "/team"
+        weight = 8
+
+        [[menu.nav]]
+        parent = "Info"
+        name = "Contact"
+        URL = "/contact"
+        weight = 9
+
+
+[params]
+logo = "images/logo.png"
+mail = "info@sciviews.org"
+github = "github.com/SciViews"
+searchIcon = "ti-search"
+home = "Home"
+shareURL = "https://www.sciviews.org"
+# Google Map
+gmapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"
+mapLatitude = "50.463287"
+mapLongitude = "3.954893"
+mapMarker = "images/marker.png"
+# Google Analytics
+googleAnalitycsID = "UA-139912016-1"
+
+# mailchimp subsciption
+#mailchimpFormAction = "https://themefisher.us9.list-manage.com/subscribe/post?u=f95ece2732a6e9925f2e70a61&amp;id=b1e227529e" # replace this url with yours
+#mailchimpFormName = "b_f95ece2732a6e9925f2e70a61_b1e227529e" # replace this code with yours
+
+
+  # meta data
+  [[params.meta]]
+  name = "description"
+  content = "Software for reproducible research with R"
+
+  [[params.meta]]
+  name = "keywords"
+  content = "data science, R, Python, statistics"
+
+    # Quote Button
+    [params.quoteBtn]
+    enable = true
+    btnText = "Install svbox"
+    btnURL = "software/svbox#install"
+
+    # about
+    [params.about]
+    enable = true
+    bgImage = "images/background/about-bg.jpg"
+    title = "Who We Are?"
+    description = "We work at the University of Mons in Belgium. We build software for reproducible research with R."
+    [params.about.btn]
+    enable = true
+    btnText = "Our Lab Website"
+    btnURL = "http://econum.umons.ac.be"
+
+        [[params.about.listLeft]]
+        listItem = "SciViews Box"
+
+        [[params.about.listLeft]]
+        listItem = "SciViews::R"
+
+        [[params.about.listLeft]]
+        listItem = "Zoo/PhytoImage"
+
+        [[params.about.listRight]]
+        listItem = "Courses in Data Science"
+
+        [[params.about.listRight]]
+        listItem = "Services and Consultancy"
+
+    # promo video
+    [params.promoVideo]
+    enable = true
+    heading = "We Work <br/> for an Open Science"
+    videoURL = "https://www.youtube.com/watch?v=w-UObuhUty8"
+    title = "See an example of research project <br> we have contributed to (in French)."
+
+    # cta
+    [params.cta]
+    enable = true
+    bgImage = "images/background/cta.jpg"
+    title = "Looking for the SciViews Box?"
+    btnText = "Download"
+    btnURL = "software/svbox#download"
+
+    # clients Logo Slider
+    [params.logoSlider]
+    enable = false
+        [[params.logoSlider.sliderItem]]
+        image = "images/client-logo/client-logo-1.png"
+        URL = "#"
+
+        [[params.logoSlider.sliderItem]]
+        image = "images/client-logo/client-logo-2.png"
+        URL = "#"
+
+        [[params.logoSlider.sliderItem]]
+        image = "images/client-logo/client-logo-3.png"
+        URL = "#"
+
+        [[params.logoSlider.sliderItem]]
+        image = "images/client-logo/client-logo-4.png"
+        URL = "#"
+
+        [[params.logoSlider.sliderItem]]
+        image = "images/client-logo/client-logo-5.png"
+        URL = "#"
+
+    # footer
+    [params.footer]
+    logo = "images/logo-footer.png"
+    content = "We build software for reproducible research with R"
+
+    # service links
+    services = "Related"
+
+    # quickLinks
+    quickLink = "Quick Link"
+
+    # subscribe
+    subscribe = "Contact Us"
+    subscribeContent = "Need more info?"
+
+    # copyright
+    copyright = "SciViews</span> &copy; 2019 All Right Reserved"
+
+        # social icon
+        [[params.footer.socialIcon]]
+        icon = "ti-github"
+        URL = "https://github.com/SciViews"
+
+        [[params.footer.socialIcon]]
+        icon = "ti-twitter-alt"
+        URL = "https://twitter.com/PhilGrosjean"
+
+        [[params.footer.socialIcon]]
+        icon = "ti-linkedin"
+        URL = "https://www.linkedin.com/in/philippe-grosjean-5b6b29a2/"
+
+        #[[params.footer.socialIcon]]
+        #icon = "ti-vimeo-alt"
+        #URL = "#"
+
+        # service links
+        [[params.footer.service]]
+        serviceItem = "Our Lab"
+        URL = "http://econum.umons.ac.be"
+
+        [[params.footer.service]]
+        serviceItem = "Our Faculty"
+        URL = "https://web.umons.ac.be/fs/en/"
+
+        [[params.footer.service]]
+        serviceItem = "Complexys"
+        URL = "https://web.umons.ac.be/complexys/en/"
+
+        [[params.footer.service]]
+        serviceItem = "InforTech"
+        URL = "https://web.umons.ac.be/infortech/en/"
+
+        [[params.footer.service]]
+        serviceItem = "UMONS"
+        URL = "https://web.umons.ac.be/en/"
+
+        # quick links
+        [[params.footer.quickLinks]]
+        quickLinkItem = "SciViews Box"
+        URL = "software/svbox"
+
+        [[params.footer.quickLinks]]
+        quickLinkItem = "SciViews::R"
+        URL = "software/sciviews-r"
+
+        [[params.footer.quickLinks]]
+        quickLinkItem = "Zoo/PhytoImage"
+        URL = "software/zooimage"
+
+        [[params.footer.quickLinks]]
+        quickLinkItem = "Blog"
+        URL = "blog"
+
+        [[params.footer.quickLinks]]
+        quickLinkItem = "About"
+        URL = "about"
+
+        # bottom links
+        #[[params.footer.links]]
+        #    name = "Sitemap"
+        #    URL = "#"
+
+        [[params.footer.links]]
+            name = "Site content under CC-BY 4.0 license"
+            URL = "https://creativecommons.org/licenses/by/4.0/"
+
+    # share blog post
+    # Note: NOT used any more, just here as a reminder
+    [[params.sharePost]]
+    icon = "ti-twitter-alt"
+    preURL = "#"
+
+    [[params.sharePost]]
+    icon = "ti-facebook"
+    preURL = "#"
+
+    [[params.sharePost]]
+    icon = "ti-linkedin"
+    preURL = "#"
+
+    [[params.sharePost]]
+    icon = "ti-email"
+    preURL = "#"

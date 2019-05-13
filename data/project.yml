@@ -1,0 +1,8 @@
+title : Our Projects
+content : The research projects we have contributed to.
+filterList :
+  - filterTitle : Software
+    dataFilter : Software
+
+  - filterTitle : Statistics
+    dataFilter : Statistics

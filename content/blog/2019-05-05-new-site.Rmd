@@ -1,0 +1,687 @@
+---
+title: "SciViews New Site"
+author: "Philippe Grosjean"
+date: 2019-05-05T21:13:14+01:00
+type: post
+bgImage: images/background/page-title.jpg
+image: images/blog/website.png
+categories: ["Article"]
+tags: ["News"]
+params:
+  abstract: |
+    The SciViews web site is completely refactored.
+    
+    This page shows how *posts* are presented with the new skin.
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = FALSE)
+library(knitr)
+# Set global chunk options: images will be 7x5 inches
+# + class.output (and warning/error/message with knitr >= 1.22)
+opts_chunk$set(fig.width = 7, fig.height = 5,
+  class.output = "chunk-output", class.warning = "chunk-warning",
+  class.error = "chunk-error", class.message = "chunk-message")
+# You need a recent (>= 0.9-9) version of svSweave
+library(svSweave)
+```
+
+
+### Abstract {-}
+
+<!-- Note that using {-} after a header prevents it to be numbered -->
+
+<div class="abstract">
+`r params$abstract`
+</div>
+
+-----
+
+Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents (among other possible formats). For more details on using R Markdown see <http://rmarkdown.rstudio.com>. This version supports YAML header starting and ending with three dashes (`---`). It also includes improvements for scientific documents (figures and tables numbering and reference, equations and equations numbering, citations and bibliographic references, ...)
+
+_**Here are the various R Markdown features you can use:**_
+
+
+### Headers {-}
+
+* Header with 6 levels, either with `#`, or with underline:
+
+
+# Header 1
+
+Some text...
+
+## Header 2
+
+Some text...
+
+### Header 3
+
+Some text...
+
+#### Header 4
+
+Some text...
+
+##### Header 5
+
+Some text...
+
+###### Header 6
+
+Some text...
+
+An alternate syntax for headers:
+
+Header 1
+========
+
+Header 2
+--------
+
+
+## Headers can _contain_ forma^tting^ and [links](http://www.sciviews.org)
+
+**Take care that a blank line is _required_ before headers as
+#22 this could too easily be interpretted as a header otherwise.**
+
+* One can put identifiers after header, to allow [linking to them](#myheader) elsewhere. Otherwise, headers are autoidentified by a special kind of reformatting of the string. Note also that references to headers can also be implicit. That is, `[linking to a header]`, or `[linking to a header][]` should work too: this is a link to the [abstract][].
+
+#### An identified header {#myheader}
+
+* One can force unnumbered titles using `{-}` or `{.unnumbered}` (providing, of course, that the other headers are numbered).
+
+
+### Basic text formatting
+
+* Bold using __bold__ or **bold**
+
+* Italic using _italic_ or *italic*, but intra_word_underscore is not interpreted (use stars for that like in this w*or*d)
+
+* Super^script^, or sub~script~. No space can occur inside super- or subscript. If you need it, backslash-escape the space like P~a\ cat~.
+
+* Strikethrough with ~~this formatting~~.
+
+* Formattings can be combined of course, like **_bold italic with super^script^_**.
+
+* Inline code like `x <- 1`, and if you need backquote inside it `` `@var` <- 2 ``.
+
+* Links are automatically detected like http://example.com, or can be explicitly indicated (with a different text) like [some example](http://example.com). _Note that Markdown uses also [reference links](#reflinks)_. You can also put your links between angle brackets <http://example.com>.
+
+* You can use any UTF-8 character (at least for HTML documents (examples: µm, Ω, Æ, ∫√)...
+
+* You need to backshlash-escape punctuation you don't want to be interpreted ad formatting code, like \*foo\*.
+
+* A nonbreaking space is simply an escaped space, like between "Fig." and "3" here: Fig.\ 3.
+
+* A few sequences of characters produce special characters. Use of --dashes-- and ---em-dashes---. Three dots is ellipsis... and I can use any unicode, too, for special characters, like 😌.
+
+
+### Special paragraphs and other items
+
+* Quoted text (need blank line before it to avoid misinterpretation of
+> inside a paragraph)
+
+> Some quoted text
+
+> With two paragraph...
+
+> More quoted
+> <br/>with a second paragraph within the same quote block.
+
+> > And double quotation
+
+> > with two paragraphs...
+
+* Line blocks
+
+| This is line block
+| It respect text position
+|   Like here
+  and you can go to the line
+| And a new line here
+
+* Preformatted text:
+
+    Some preformatted text
+    using indentation
+
+* Preformatted or verbatim sections indented with four spaces of fenced (but only fenced blocks work in lists and are thus the preferred mean to do so). Fenced blocks are delimited by three or more tildes (`~`) or backticks (`` ` ``) and they must be separated from the surrounding using blank lines. You can use identifiers too like in [this block](#mycode):
+
+```
+Some preformatted text (like for code blocks)
+using a fenced block with backticks
+```
+
+It is very easy to indicate a language, and syntax highlighting will be used for it:
+
+```r
+# Idem, but with R syntax highlighting
+for (i in 1:100) {
+  if (i > 1) stop("Got it!")
+}
+```
+
+It can also be specified in a more complex way, and with marks allowing to link to it:
+
+~~~~ {#mycode .python}
+name = raw_input('What is your name?\n')
+print 'Hi, %s.' % name
+~~~~
+
+Then you can link to it [like here](#mycode).
+
+* Horizontal rule or page break using four or more `*`, `-` or `_` optionally separated by spaces
+
+****
+
+----
+
+_ _ _ _ _
+
+* Line breaks when ending with two or more spaces  
+like this paragraph. However, this is not very visible, nor usable in table. So you can also use a backslash followed by a newline\
+and this approach is the only way to do it in tables!
+
+* You can escape special characters except in code block or inline code if you don't want them to be interpreted as formatting marks like \_here\_.
+
+* Non-breaking space is entered as a backslash-escaped space (`\ `).
+
+* Comment that do not appear in the final document are similar to HTML comments (`<!-- comment-->`), but can also be entered using the `[//]:` syntax.
+<!-- this is a comment and should not be present in the final document -->
+
+[//]: A comment...
+
+* Smart punctuation is used and converts straight quotes into curly ones like 'here' or "here". It will also interpret `--` as en-dash --, `---` as em-dash ---, and `...` as ellipses ... Moreover, nonbreaking spaces are automatically used after certain items like Mr. Schmidt.
+
+* Note that raw HTML (with or without interpretation of markdown inside it) can be included too.
+
+* Footnotes[^myfootnote] are easy to insert. Another example[^longnote]. And here, I use an inline footnote^[Inline footnotes are easier to write right in your text, but they can only span on a single paragraph.].
+
+[^myfootnote]: This is my simple footnote.
+
+[^longnote]: Footnotes can span on multiple paragraphs, providing you indent them with four spaces:
+  
+    * A list item
+  
+    Another paragraph belonging to the note.
+  
+Text after the long note...
+
+
+### Lists
+
+* Unordered list (using `*`, `+` or `-`)
+    * Second level
+    
+* Compact
+* list
+* of items
+
+* Loose
+
+* list
+
+* of items
+  
+1. Ordered list
+    a. Second level
+    a. Second level, second item
+2. Back to first level
+1. There is a mechanism to include paragraphs inside the list using indentation (don't forget the empty line in between to start a new paragraph):
+
+    ```
+    Some preformatted inside a list item
+    ```
+4. Fourth item
+
+* The fancy list extension allow for using `#.` for ordered lists, as well as something like `1)`, or `(I)` for instance:
+
+1) First item
+2) Second item
+
+(I) First item
+(II) Second item
+(III) Third item
+(IV) Fourth item
+
+* Definition lists are also supported (definitions must start with `:` or `~`) and blank lines are optional between the term and its definition (loose _vs_ compact form), but not before the term. Finally, several defintions are allowed for the same term.
+
+Term 1
+
+:   Definition 1
+
+Term 2 with _inline markup_
+
+:   Definition 2
+
+        { some code, part of Definition 2 }
+
+    Third paragraph of definition 2.
+
+or
+
+Term 1
+  ~ Definition 1
+
+Term 2
+  ~ Definition 2a
+  ~ Definition 2b
+
+* Numbered example lists use a sequential numbering throughout the whole document and use the `@.` syntax:
+
+@. First item
+@. Second item
+
+Some text
+
+@. Third item
+
+You can give them labels (alphanumeric + character + hyphen) and refer to them later on. You can also enclose it into parentheses, but it does not change how it is displayed:
+
+(@good) <a name="good"></a>This is a good example
+
+As [example](#good)\ @good illustrates^[Note that you **cannot** include the number inside the link, unfortunately.], ...
+
+And what if I refer to it before the label like @notgood? Yes! It works! But unfortunately, there is no link to [example](#notgood) @notgood.
+
+@notgood. A bad example
+
+Finally, to force ending a list, just add a comment where you want to end it (same trick applies for restarting another numbered list):
+
+1. list item
+2. another item
+
+    Formatted block with spaces does not work inside lists
+
+3. third list item
+
+<!-- end of list -->
+
+    Formatted block with spaces work now
+
+1. New list item #1
+
+Indent paragraphs or blocks or chunks (see hereunder) following a list item to include it in the list:
+
+1. The area of a circle with a given radius is:
+    ```{r radius}
+    radius <- 3.5
+    pi * radius ^ 2
+    ```
+2. As you can see, the R chunk and its associated results are included in the list element!
+
+
+## Images
+
+* To insert images in your document, you use:
+
+![A nice little cat.](../../figures/markdown_cat.jpg)
+
+<!-- Of course, you can also link to an image on the Internet: -->
+
+![The official R logo.](https://www.r-project.org/logo/Rlogo.png)
+
+An inline image: ![A small SciViews Box logo.](../../figures/svbox.png). Note here that when an image appears alone in its line, it is interpreted as a figure (possibly with caption), and otherwise, it is interpeted as an inline image.
+
+
+## Reference links {#reflinks}
+
+* Reference links are done this way [a linked part][id1], or for images:
+[![alt text][id2]](http://www.sciviews.org)
+
+[id1]: http://example.com     "Title"
+[id2]: ../../figures/svbox.png   "Figure title"
+
+
+## Hugo shortcodes
+
+* Tweeter. In R Markdown, you should not use the `{{< tweet 936232450006704128 >}}` syntax. Instead, you should use:
+
+```{r}
+blogdown::shortcode('tweet', '936232450006704128')
+```
+
+* Youtube:
+
+```{r echo=FALSE}
+blogdown::shortcode('youtube', 'w7Ft2ymGmfc')
+```
+
+* Vimeo:
+
+```{r echo=FALSE}
+blogdown::shortcode('vimeo', '146022717')
+```
+
+* Github Gist:
+
+```{r echo=FALSE}
+blogdown::shortcode('gist', 'phgrosjean', 'f1d53c0dc1124522b2138033188497d0')
+```
+
+* Instagram:
+
+```{r echo=FALSE}
+blogdown::shortcode('instagram', 'BWNjjyYFxVx', 'hidecaption')
+```
+
+
+ Figure:
+
+```{r echo=FALSE}
+blogdown::shortcode('figure', src = '/figures/markdown_cat.jpg', alt = "A nice little cat")
+```
+
+
+## Tables
+
+There are several ways to present tables.
+
+* Simple tables are easy to create. Header and rows must be on two lines, and column alignment is determined according to the position of the header relative to the line under it. Tables must be surrounded by empty lines and an optional caption may be added above or below the table, starting with `Table:` or `:` (which is stripped off).
+
+Table: Demonstration of a simple table with caption.
+
+  Right     Left     Center     Default
+-------     ------ ----------   -------
+     12     12        12            12
+    123     123       **123**      123
+      1     1          1             1
+
+* The header may be omitted, but then, the ending line is mandatory.
+
+Table: A table without header.
+
+-------     ------ ----------   -------
+     12     12        12             12
+    123     123       123           123
+      1     1          1              1
+-------     ------ ----------   -------
+
+* Multiline tables start and end with a line of dashes. Cells are separated by spaces (in case of a single row table, add the empty line too, otherwise, the table is interpreted as a sinlge-line table). In multiline tables, the writer tries to respect the relative size of the columns that appear in the markdown document.
+
+Table: A multiline table.
+
+-------------------------------------------------------------
+ Centered   Default           Right Left
+  Header    Aligned         Aligned Aligned
+----------- ------- --------------- -------------------------
+   First    row                12.0 * Example of a row that
+                                    spans multiple lines.
+
+  Second    row                 5.0 * Here's another one. Note
+                                    the blank line between
+                                    rows.
+-------------------------------------------------------------
+
+* Headers can be omitted too in multiline tables (note that this could be used as a simple formatting hack to place --short-- material on several columns!):
+
+: Here's a multiline table without headers.
+
+----------- ------- --------------- -------------------------
+   First    row                12.0 Example of a row that
+                                    spans multiple lines.
+
+  Second    row                 5.0 Here's another one. Note
+                                    the blank line between
+                                    rows.
+----------- ------- --------------- -------------------------
+
+* Grid tables (rows with `=` separate headers and can be omitted for headerless tables). Apparently, more formatting is allowed in gridded tables, like list items:
+
+: Sample grid table.
+
++---------------+---------------+--------------------+
+| Fruit         | Price         | Advantages         |
++===============+===============+====================+
+| Bananas       | $1.34         | - built-in wrapper |
+|               |               | - bright color     |
++---------------+---------------+--------------------+
+| Oranges       | $2.10         | - cures scurvy     |
+|               |               | - tasty            |
++---------------+---------------+--------------------+
+
+* Pipe tables look like this (beginning and end pipes are optional, and optional colon indicates alignment, header can be omitted but not the lines, and finally, although ugly, pipe do not need to align). Note that table characters like `|` cannot appear in the table and this form does not support multiline tables. The semicolumn `:`may be used to indicate alignment inside each column, but it is an optional feature.
+
+: A typical pipe table.
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|   12  |  12  |    12   |    12  |
+|  123  |  123 |   123   |   123  |
+| * 1   |    1 |     1   |     1  |
+
+
+### Equations
+
+* Inline equations like $\frac{1}{n} \sum_{i=1}^{n} x_{i} + \beta$, or $f(\alpha, \beta) \propto x^{\alpha-1}(1-x)^{\beta-1}$.
+
+* Display equation
+
+$$ \frac{1}{n} \sum_{i=1}^{n} x_{i} + \beta $$
+ 
+Here is a more complex example spanning on several lines: 
+  
+$$ \begin{aligned}
+\dot{x} & = \sigma(y-x) \\
+\dot{y} & = \rho x - y - xz \\
+\dot{z} & = -\beta z + xy
+\end{aligned}$$
+
+If you feel difficult to write LaTeX equations, there are inline LateX equation editors like [this one](http://www.sciweavers.org/free-online-latex-equation-editor), and you don't need to install anything on your computer to used them. Also, there is a R Studio addin provided with the `bookdown` R package to ease entering LaTeX equations in your R Markdown document.
+
+
+## Knitr chunks
+
+The R package `knitr` is used to insert R code withing your Markdown document, which makes altogether an R Markdown document, usually with the `.Rmd` extension. Go to **knitr** [homepage](http://yihui.name/knitr) for more details.
+
+
+### R chunks
+
+* A few R commands:
+
+```{r}
+# This is a comment (don't use ##, since it is reserved for output!)
+a <- 1 + 1 # Another comment
+TRUE; NA; "Some text"
+summary(cars) # A table
+```
+
+* Normal output _versus_ message _versus_ warning _versus_ error:
+
+```{r, warning=TRUE, error=TRUE}
+# Normal output
+cat("Some text...\n")
+# A message
+message("My very nice message")
+# Output with a warning
+1:2 + 1:3
+# An error
+non_existing_object
+```
+
+* R chunk with option to generate a plot^[Do **not** use underscore `_` in the label of your chunk to use it as a link!]:
+
+```{r plot-cars, echo=FALSE, fig.cap="An example figure generated by R, from the `cars` dataset."}
+par(mar = c(5.1, 4.1, .1, .1))
+with(mtcars, {
+  plot(mpg ~ hp, pch = 20, col = 'darkgray',
+    xlab = "Horsepower", ylab = "Miles per Gallon")
+  lines(lowess(hp, mpg))
+})
+```
+
+My plot is [here](#fig:plot-cars).
+
+* Another plot:
+
+```{r plot-cars2, fig.width=5, fig.height=4, fig.cap="Distance in function of speed for the `cars` data set."}
+library(ggplot2)
+qplot(speed, dist, data = cars) + geom_smooth(method = "loess")
+```
+
+I can now reference this figure in the text (see [this plot](#fig:plot-cars2)).
+
+* R chunk with option to generate a table :
+
+```{r table-iris, echo=FALSE, results='asis'}
+kable(head(iris), digits = 2,
+  caption = "The first few lines of the `iris` data set.")
+```
+
+Now, I can refer to this table (see [this Table](#tab:table-iris)).
+
+
+### Tables using `xtable`
+
+The `xtable` R package offers an alternative to output well-formatted tables in an R Markdown document: 
+
+```{r, results='asis'}
+library(xtable)
+data(tli)
+## Demonstrate data.frame... can also export many objects!
+tli.table <- xtable(tli[1:10, ])
+digits(tli.table)[c(2, 6)] <- 0
+## Choose one of these!
+print(tli.table, floating = FALSE, type = "html")
+```
+
+
+### Tables using `pander`
+
+The `pander` package can output various objects in pandoc:
+
+```{r, results='asis'}
+library(pander)
+# You can change default pander options:
+panderOptions('table.alignment.default', function(df)
+  ifelse(sapply(df, is.numeric), 'right', 'left'))
+panderOptions('table.split.table', Inf)
+panderOptions('big.mark', ",")
+panderOptions('keep.trailing.zeros', TRUE)
+pander(head(iris))
+```
+
+There are many other packages to output well-formatted tables from R objects, like: **stargazer**, **table1**, **tables**, **flextable**, **formattable**, **htmlTable**, **huxtable**, **kableExtra**, **pixiedust**, **tangram**, **texreg**,  **ztable**,  etc.
+
+
+### Inline R expressions and special chunks
+
+* Inline R expression like `r 1+1`, or `r R.version.string`.
+
+* Rcpp code chunks can also be included in your document:
+
+```{r fibonacci_rcpp, engine='Rcpp'}
+#include <Rcpp.h>
+
+// [[Rcpp::export]]
+int fibonacci(const int x) {
+    if (x == 0 || x == 1) return(x);
+    return (fibonacci(x - 1)) + fibonacci(x - 2);
+}
+```
+Because fibonacci was defined with the `Rcpp::export` attribute it can now be called as a normal R function:
+
+```{r fibonacci_test}
+fibonacci(10L)
+fibonacci(20L)
+```
+
+* An R chunk that is displayed, but not executed:
+
+```{r compile, eval=FALSE}
+library(knitr)
+knit('R Markdown V2 Syntax.Rmd')
+```
+
+* A Python chunk:
+
+```{python}
+import sys
+print(sys.version)
+```
+
+
+
+## Citations
+
+Thanks to Pandoc, it is rather easy to insert citations in your text. First, you need to specify a bibliography file in a YAML section. A number of formats are supported, but to remain compatible with LaTeX, use BibTeX (`.bibtex`) or BibLaTeX (`.bib`) format only. Note that the `bibliography` folder, like for figures is two folders ahead in the relative path, i.e., `../../bibliography/<my-file.bib>`.
+
+The file we use here is named `bibliography.bib`. It is enough to refer to it in a YAML section. However, we will also add more reference to the bibliography later on. So, we first copy this file into `bibliography-full.bib` and then, we refer to the later file instead.
+
+```{r include=FALSE}
+file.copy("../../bibliography/bibliography.bib", "../../bibliography/bibliography-full.bib", overwrite = TRUE)
+```
+
+---
+bibliography: "../../bibliography/bibliography-full.bib"
+---
+
+* A `references` field can also be included in a YAML section for self-contained bibliography (and you can use both at the same time!).
+
+---
+references:
+- id: fenner2012a
+  title: One-click science marketing
+  author:
+  - family: Fenner
+    given: Martin
+  container-title: Nature Materials
+  volume: 11
+  URL: 'http://dx.doi.org/10.1038/nmat3283'
+  DOI: 10.1038/nmat3283
+  issue: 4
+  publisher: Nature Publishing Group
+  page: 261-263
+  type: article-journal
+  issued:
+    year: 2012
+    month: 3
+---
+
+* The R package `knitcitations` uses pandoc citations, but enhances its mechanisms by allowing to add citations by DOIs or URL and by linking to cited papers directly. You need to start loading the package and clean up citations.
+
+```{r knitcitations_init, echo=FALSE}
+library(knitcitations)
+cleanbib()
+cite_options(citation_format = "pandoc", style = "markdown", # text, markdown or html
+  hyperlink = "to.doc", # Try to.doc, to.bib, or FALSE
+  cite.style = "authoryear", # Try "authoryear", "numeric" or "authortitle"
+  max.names = 3)
+```
+
+You can use references citations contained in your bibliography inside square brackets, separated by semicolons and each citation must be composed using `@` + citation identifier. For instance [@greenwade93; @fenner2012a], or [see @fenner2012a, pp. 12-17; also @greenwade93, ch. 2]. Use a minus sign before the reference to suppress mention of the author: as Greenwade [-@greenwade93] indicated, "bla bla". You can also write the inline citation this way: @fenner2012a [p. 10] says "bla".
+
+Finally, you can include citations in the references without citing them by using a `nocite` entry in a YAML block:
+
+```
+---
+nocite:
+ | @item1, @item2
+---
+```
+
+By default, the Chicago author-date format is used by Pandoc, but you can use a different style by specifying a CSL 1.0 style in a `csl` metadata entry in a YAML block. The RStudio [rmarkdown](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html) site indicates two interesting pages to get CSL files: [CSL official repository](https://github.com/citation-style-language/styles) and [Zotero styles page](http://zotero.org/styles) that allows easy browsing. Here, we use the **Marine Biology** style.
+
+As already mentioned, an addition to this mechanism is provided by the `knitcitations` package that allows to build citations from DOIs, or URL into Pandoc-compatible citations. The question of independent `.bib` file, and/or need for an Internet link to compile the document is discussed here <http://blog.martinfenner.org/2013/06/19/citations-in-scholarly-markdown/>.
+
+One big lack in this approach is no link between the citation and the reference.
+
+---
+csl: "../../bibliography/marine-biology.csl"
+---
+<!-- Try also switching from marine-biology.csl to ecology.cls -->
+
+Now for `knitcitations` citations... We can add a citation by DOI `r citep("10.1890/11-0011.1")`, or `r citet("10.1098/rspb.2013.1372")`. Since a citation like `name_year` is automatically created, one do not need to recite the same items by DOI, but one can cite like this `r citep("Abrams_2012")`, which should be the same as `r citep("10.1890/11-0011.1")`. Finally, one can also cite R bibentry objects directly, like `r citep(citation("knitr"))`. All these approaches are combinable with traditional pandoc citations, providing these citations are already included in the `.bib` file.
+
+Finally, don't forget to generate the complete `.bib` file by appending the following last R chunk into your document in order to add the `knitcitations` in your document properly:
+
+```{r knitcitations_generate, message=FALSE}
+write.bibtex(file = "../../bibliography/bibliography-full.bib", append = TRUE)
+```
+
+Note how the references are included automatically at the end of the document. Do not forget to put an adequate header by yourself!
+
+
+## References {-}

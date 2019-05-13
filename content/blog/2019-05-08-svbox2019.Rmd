@@ -1,0 +1,17 @@
+---
+title: "SciViews Box 2019"
+author: "Philippe Grosjean"
+date: 2019-05-08T11:43:10+01:00
+type: post
+bgImage: images/background/page-title.jpg
+image: images/blog/svbox2019.png
+categories: ["News"]
+tags: ["Tutorial"]
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = FALSE)
+```
+
+Version 2019 of the SciViews Box is in preparation...

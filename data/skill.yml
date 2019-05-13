@@ -1,0 +1,29 @@
+enable : true
+titleSM : Development
+title : Projects advancement
+content: We are reworking our data science course at the University of Mons, Belgium. <br><br> A new version of Zoo/PhytoImage is on track.
+counter :
+  - title : Projects Done
+    icon : ti-server
+    count : 14
+
+  - title : Github repositories
+    icon : ti-harddrives
+    count : 25
+
+  - title : Cups Of Coffee
+    icon : ti-paint-bucket
+    count : 580
+
+progressBar :
+  - title : SciViews Box
+    progress : 75%
+
+  - title : SciViews::R
+    progress : 40%
+
+  - title : BioDataScience Book
+    progress : 65%
+
+  - title : Zoo/PhytoImage version 6
+    progress : 90%

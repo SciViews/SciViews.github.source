@@ -1,0 +1,63 @@
+enable : true
+heading : Biological Data Science Course
+content : We organize courses in Biological Data Science at the University of Mons (Belgium) in French. Online material is available under a CC By-NC-SA 4.0 license.<br/><i>Tranlations in English or other languages are welcome!</i>
+courseItem :
+  - title : Part 1
+    icon : ti-bar-chart
+    value : 12 modules
+    validity : 6 months
+    btnText : Online Material
+    btnURL : 'https://biodatascience-course.sciviews.org/sdd-umons/'
+    serviceList :
+      - listItem : Introduction - Software & tools
+      - listItem : Visualisation I - Scatterplot
+      - listItem : Visualisation II - Distributions
+      - listItem : Visualisation III - Barplot/boxplot
+      - listItem : Data processing I - Importation/conversion
+      - listItem : Data processing II - Contingency/sampling
+      - listItem : Data processing III - Multi-tables/databases
+      - listItem : Experimental design & good practices
+      - listItem : Probabilities & distributions
+      - listItem : Chi-2 test, proportions & correlations
+      - listItem : Confidence interval/Student test
+      - listItem : Analysis of variance
+
+  - title : Part 2
+    icon : ti-stats-up
+    value : 14 modules
+    validity : 8 months
+    btnText : Online Material
+    btnURL : 'https://biodatascience-course.sciviews.org/sdd-umons/'
+    serviceList :
+      - listItem : Linear model
+      - listItem : Generalized linera model
+      - listItem : Nonlinear model
+      - listItem : Robust & quantile regression/survival analysis
+      - listItem : Distance matrices & hierachical clustering
+      - listItem : K-means & SOM
+      - listItem : PCA & facotr analysis
+      - listItem : MFA & Multidimensional scaling
+      - listItem : Classification I - bases & LDA
+      - listItem : Classification II - metrics & trees methods
+      - listItem : Classification III = SVM, deep learning
+      - listItem : Time series I - description, ACF, spectral analysis
+      - listItem : Time series II - decomposition & regularisation
+      - listItem : Spatial statistics, maps & krigging
+
+  - title : Part 3
+    icon : ti-package
+    value : 10 modules
+    validity : 6 months
+    btnText : Online Material
+    btnURL : 'https://biodatascience-course.sciviews.org/sdd-umons/'
+    serviceList :
+      - listItem : Practice I, multi-file templates
+      - listItem : Data I - Dates, circular data, ...
+      - listItem : Data II - Text & regular expressions
+      - listItem : Practice II, modularization & functions
+      - listItem : Practice III, open data
+      - listItem : Code organization, OOP
+      - listItem : Code testing & code optimization
+      - listItem : Packages & continuous integration
+      - listItem : Databases SQL & noSQL
+      - listItem : Parallel and cloud computing

@@ -1,0 +1,45 @@
+enable : true
+sliderItem:
+  - subHeading : Reproducible Science
+    heading : SciViews Box
+    description : An easily installable software environment for data science.
+    bgImage : images/banner/banner-1.jpg
+    dataIcon : ti-desktop
+    dataText : SciViews Box
+    btn :
+      enable : true
+      btnText: More details
+      btnURL : 'software/svbox'
+
+  - subHeading : Learning data science
+    heading : BioDataScience
+    description : An interactive book to learn data science (in French, mainly targetting biologists).
+    bgImage : images/banner/banner-2.jpg
+    dataIcon : ti-bar-chart
+    dataText : Data Science
+    btn :
+      enable : true
+      btnText: More details
+      btnURL : 'course'
+
+  - subHeading : Install
+    heading : SciViews::R
+    description : A series of packages that make R and tidyverse even more friendly.
+    bgImage : images/banner/banner-3.jpg
+    dataIcon : ti-package
+    dataText : SciViews::R
+    btn :
+      enable : true
+      btnText: More details
+      btnURL : 'software/sciviews-r'
+
+  - subHeading : Analyse your plankton samples
+    heading : Zoo/PhytoImage
+    description : Analyze and classify your plankton numerical images.
+    bgImage : images/banner/banner-4.jpg
+    dataIcon : ti-desktop
+    dataText : Zoo/PhytoImage
+    btn :
+      enable : true
+      btnText: More details
+      btnURL : 'software/zooimage'

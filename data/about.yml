@@ -1,0 +1,35 @@
+philosophy :
+  enable : true
+  titleSM : Zen Data Science
+  title : Our Philosophy
+  content : We believe that a standardized software environment that everybody can easily and rapidly install on its computer could make science and data science more reproducible. We build the SciViews Box, based on a stable live Linux and VirtualBox with that idea in mind.
+  image : images/about/philosophy.jpg
+  btn :
+    enable : true
+    btnText : Explore More
+    btnURL : "software/svbox"
+
+ceo :
+  enable : true
+  bgImage : images/about/phil-dive.png
+  title : We develop R packages <br> for biologists
+  content : Our main work at the EcoNum lab concerns the oceans. We study plankton and corals. As such, we know the tools biologists need in their everyday work, and try hard to match these needs.
+  signature : images/about/econum-logo.png
+  name : Philippe Grosjean
+  designation : Professor
+
+funfacts :
+  enable : true
+  bgImage : images/background/cta.jpg
+  counter :
+    - title : Projects Done
+      icon : ti-server
+      count : 14
+
+    - title : Github repositories
+      icon : ti-harddrives
+      count : 25
+
+    - title : Cups Of Coffee
+      icon : ti-paint-bucket
+      count : 580

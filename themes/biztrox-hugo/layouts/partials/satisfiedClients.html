@@ -1,0 +1,37 @@
+{{ if .Site.Data.satisfiedClients.enable }}
+{{ "<!-- clients -->" | safeHTML }}
+<section class="clients section bg-secondary overlay-dark" style="background-image: url('{{ .Site.Data.satisfiedClients.bgImage | absURL }}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+               {{ with .Site.Data.satisfiedClients.titleSM }} <h5 class="section-title-sm text-color">{{ . }}</h5> {{ end }}
+               {{ with .Site.Data.satisfiedClients.title }} <h2 class="text-white mb-20">{{ . }}</h2> {{ end }}
+               {{ with .Site.Data.satisfiedClients.content }} <p class="text-white">{{ . }}</p> {{ end }}
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="pl-0">
+                            {{ range .Site.Data.satisfiedClients.clientsLogoLeft }}
+                            <li class="text-center mb-3">
+                                <img src="{{ .logo | absURL }}" alt="client-logo">
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            {{ range .Site.Data.satisfiedClients.clientsLogoRight }}
+                            <li class="text-center mb-3">
+                                <img src="{{ .logo | absURL }}" alt="client-logo">
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ "<!-- /clients -->" | safeHTML }}
+{{ end }}

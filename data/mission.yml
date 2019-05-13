@@ -1,0 +1,17 @@
+enable : false
+titleSM : Our Goal
+title : Company Mission
+description : We develop software for reproducible science.
+image : images/chart.png
+accordion :
+  - ID : collapseOne
+    title : Teaching
+    description : At the University of Mons (UMONS, Belgium) we are in charge of the whole cursus in Data Science for Biologists. In this context, we create material and software for teaching Data Science.
+
+  - ID : collapseTwo
+    title : Research
+    description : We study the ecophysiology of corals under changing conditions. We also develop methods to automatically classify numerical images of plankton with Zoo/PhytoImage.
+
+  - ID : collapseThree
+    title : Services
+    description : We develop solutions, mainly using R. Fors instance, PASTECS (Package for the Analysis of Space-Time Ecological Series) was funded by IFREMER, and AURELHY (spatial interpolation using relief information) was funded by FAO.
