@@ -563,7 +563,25 @@ panderOptions('keep.trailing.zeros', TRUE)
 pander(head(iris))
 ```
 
-There are many other packages to output well-formatted tables from R objects, like: **stargazer**, **table1**, **tables**, **flextable**, **formattable**, **htmlTable**, **huxtable**, **kableExtra**, **pixiedust**, **tangram**, **texreg**,  **ztable**,  etc.
+
+### Tables using `flextable`
+
+The `flextable` package allows for fine customization of the formatted table:
+
+```{r}
+library(flextable)
+library(dplyr)
+library(flow)
+mtcars %>.%
+  group_by(., cyl, am) %>.%
+  summarise(., avg = mean(mpg)) %>.%
+  flextable(.) %>.%
+  bg(., bg = '#c7deff', part = 'header')
+```
+
+
+
+There are many other packages to output well-formatted tables from R objects, like: **stargazer**, **table1**, **tables**, **formattable**, **htmlTable**, **huxtable**, **kableExtra**, **pixiedust**, **tangram**, **texreg**,  **ztable**,  etc.
 
 
 ### Inline R expressions and special chunks
