@@ -1,5 +1,5 @@
 ---
-title: "SciViews Box configuration"
+title: "SciViews Box Configuration"
 date: 2020-03-17T08:32:35+01:00
 image: images/svbox/svbox-config.png
 bgImage: images/background/page-title.jpg
@@ -36,6 +36,6 @@ tags:
 
 ![An exemple if SciViews Box applications installation and reinstallation.](../../images/svbox/svbox-sv-icon.png)
 
-Note that, if you don't see the `Sv` icon at the top right in your SciViews Box, it means it is not correctly preinstalled. Install the **Lats Update** from the link at left. If you don't how to do, see [SciViews Box applications](../apps).
+Note that, if you don't see the `Sv` icon at the top right in your SciViews Box, it means it is not correctly preinstalled. Install the **Last Update** from the link at left. If you don't how to do, see [SciViews Box Applications](../apps).
 
 TODO: explain the various features in the configuration dialog box...

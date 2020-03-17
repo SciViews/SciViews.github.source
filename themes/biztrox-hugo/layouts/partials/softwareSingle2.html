@@ -1,0 +1,39 @@
+{{ "<!-- software single -->" | safeHTML }}
+<section class="section">
+    <div class="container wide-space">
+        <div class="row">
+            {{ "<!-- sidebar -->" | safeHTML }}
+            <aside class="col-lg-4 order-lg-1 order-2">
+                {{ "<!-- Download -->" | safeHTML }}
+                <div class="rounded border py-3 px-4 mb-50">
+                    <i class="d-inline-block mr-1 text-dark ti-download" style="font-size: 20px;"></i>
+                    <h5 class="mb-1 d-inline-block"> {{ .Params.DownloadTitle }}</h5>
+                    <a class="font-secondary d-block ml-4" href="{{ .Params.DownloadURL | absURL }}">{{ .Params.DownloadLabel }}</a>
+                </div>
+                {{ "<!-- See also -->" | safeHTML }}
+                <div class="mb-50">
+                    <h5 class="mb-20">See also</h5>
+                    <ul class="pl-0 border rounded px-4 py-3">
+                        <li class="font-secondary my-3 text-color custom-list">
+                            <i class="ti-arrow-circle-right"></i></i>
+                            <span class="d-inline-block font-weight-light text-dark" style="width: 130px;">{{ .Params.LinkTitle1 }}</span><br/><a class="font-secondary d-block ml-4" href="{{ .Params.LinkURL1 | absURL }}">{{ .Params.LinkLabel1 }}</a></li>
+                        <li class="font-secondary my-3 text-color custom-list">
+                            <i class="ti-arrow-circle-right"></i></i>
+                            <span class="d-inline-block font-weight-light text-dark" style="width: 130px;">{{ .Params.LinkTitle2 }}</span><br/><a class="font-secondary d-block ml-4" href="{{ .Params.LinkURL2 | absURL }}">{{ .Params.LinkLabel2 }}</a></li>
+                        <li class="font-secondary my-3 text-color custom-list">
+                            <i class="ti-arrow-circle-right"></i></i>
+                            <span class="d-inline-block font-weight-light text-dark" style="width: 130px;">{{ .Params.LinkTitle3 }}</span><br/><a class="font-secondary d-block ml-4" href="{{ .Params.LinkURL3 | absURL }}">{{ .Params.LinkLabel3 }}</a></li>
+                    </ul>
+                </div>
+            </aside>
+            {{ "<!-- software single content -->" | safeHTML }}
+            <div class="col-lg-8 order-lg-2 order-1">
+                <!--<img class="img-fluid w-100 mb-60 rounded-top" src="{{ .Params.Image | absURL }}" alt="service">-->
+                <div class="post-content post-body">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ "<!-- /software single -->" | safeHTML }}
