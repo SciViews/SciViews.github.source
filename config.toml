@@ -25,13 +25,13 @@ publishDir = "../SciViews.github.io"
     #weight = 3
 
     [[menu.nav]]
-    name = "Blog"
-    URL = "/blog"
+    name = "Course"
+    URL = "/course"
     weight = 4
 
     [[menu.nav]]
-    name = "Course"
-    URL = "/course"
+    name = "Blog"
+    URL = "/blog"
     weight = 5
 
     [[menu.nav]]

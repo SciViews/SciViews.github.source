@@ -11,15 +11,26 @@
                         </li>
                         <li class="list-inline-item">
                             {{ with .Site.Params.github }} <a href="https:{{ . | absURL }}">
-                                <i class="ti-github"></i>
                                 <span class="ml-2">{{ . }}</span> {{ end }}
+                                &nbsp;<i class="fa fa-github"></i>&nbsp;
                             </a>
                         </li>
-                        <li class="list-inline-item">
+                <!-- Search icon with collapsing form: disabled
+                           <li class="list-inline-item">
                             <a href="#" id="searchOpen">
                                {{ with .Site.Params.searchIcon }} <i class="{{ . }}"></i> {{ end }}
                             </a>
-                        </li>
+                        </li>  -->
+                        <li class="list-inline-item">
+                         <!-- start svPkgdown global site search with Google -->
+                         <form action="https://www.google.com/search" class="navbar-form navbar-right search-form-global">
+<span class="fa fa-search form-control-feedback-global"></span>
+<input type="text" class="form-control-global search-form-input" name="q" id="q"
+            placeholder="Search..." required>
+<input type="hidden" name="sitesearch" value="https://www.sciviews.org" />
+                         </form>
+                         <!-- end svPkgdown global site search with Google -->
+                       </li>
                     </ul>
                 </div>
             </div>

@@ -42,6 +42,10 @@
     <script async src="{{ .Site.Params.MathJaxCDN | default "//cdnjs.cloudflare.com/ajax/libs" }}/mathjax/{{ .Site.Params.MathJaxVersion | default "2.7.5" }}/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     {{ end }}
 
+     {{ "<!-- Added to have same icons as svPkgdown (fa + ti) -->" | safeHTML }}
+     {{ "<!-- Font Awesome icons -->" | safeHTML }}
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha256-PbSmjxuVAzJ6FPvNYsrXygfGhNJYyZ2GktDbkMBqQZg=" crossorigin="anonymous" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/v4-shims.min.css" integrity="sha256-A6jcAdwFD48VMjlI3GDxUd+eCQa7/KWy6G9oe/ovaPA=" crossorigin="anonymous" />
 
     {{ "<!--Favicon-->" | safeHTML }}
     <link rel="shortcut icon" href="{{ "images/favicon.png" | absURL }} " type="image/x-icon">

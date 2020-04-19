@@ -622,7 +622,9 @@ import sys
 print(sys.version)
 ```
 
+## Icons
 
+You have both the [font awesome](https://fontawesome.com/icons?d=gallery&m=free), and the [themify](https://themify.me/themify-icons) icons. You need to create an object of class "fa fa-xxxx", or "ti-xxxx", where "xxxx" is an icon in the collection. Here is an example from font awesome []{class="fa fa-chart-bar"}, and here is one from themify: []{class="ti-package"}. You can use these icons everywhere!
 
 ## Citations
 
