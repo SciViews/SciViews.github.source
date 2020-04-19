@@ -173,7 +173,7 @@ googleAnalitycsID = "UA-139912016-1"
     subscribeContent = "Need more info?"
 
     # copyright
-    copyright = "SciViews</span> &copy; 2019 All Right Reserved"
+    copyright = "SciViews</span> &copy; All Right Reserved"
 
         # social icon
         [[params.footer.socialIcon]]

@@ -10,7 +10,7 @@ linkedinURL : 'https://www.linkedin.com/in/philippe-grosjean-5b6b29a2/'
 #googlePlusURL : '#'
 #projectDone : 32
 #successRate : 95%
-experienceOf : 24 Years
+experienceOf : 25 Years
 from : Brussels, Belgium
 homePageLabel: 'phgrosjean.sciviews.org'
 homePageURL : 'http://phgrosjean.sciviews.org'

@@ -83,6 +83,8 @@ Header 2
 
 ## Headers can _contain_ forma^tting^ and [links](http://www.sciviews.org)
 
+[simple link](http://www.sciviews.org), `simple code` and [`code inside link`](http://www.sciviews.org).
+
 **Take care that a blank line is _required_ before headers as
 #22 this could too easily be interpretted as a header otherwise.**
 

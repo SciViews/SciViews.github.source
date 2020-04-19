@@ -16,7 +16,7 @@ linkURL2: 'https://go.sciviews.org/svbox2019-mac'
 linkTitle3: 'Last Update'
 linkLabel3: 'autoupdate02.svbox2019'
 linkURL3: 'https://go.sciviews.org/svbox2019-2'
-type : software
+type : software2
 author: Philippe Grosjean
 categories: 
   - "SciViews Box"

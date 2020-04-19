@@ -12,7 +12,7 @@
                 <h5 class="section-title-sm">Open Source Software</h5>
                 <h2 class="section-title section-title-border">Applications & Tools for R</h2>
             </div>
-            {{ range $index, $element:= where .Data.Pages "Type" "software" }}
+            {{ range $index, $element:= where .Site.RegularPages "Type" "software" }}
             {{ if lt $index 3 }}
             {{ "<!-- service item -->" | safeHTML }}
             <div class="col-lg-4 col-sm-6 mb-5" onclick="location.href='{{ .Permalink }}';" style="cursor:pointer;">
@@ -52,7 +52,7 @@
         </div>
         {{ "<!-- work slider -->" | safeHTML }}
         <div class="row work-slider">
-            {{ range $index, $element:= where .Data.Pages "Type" "project"}}
+            {{ range $index, $element:= where .Site.RegularPages "Type" "project"}}
             {{ "<!-- project item -->" | safeHTML }}
             <div class="col-lg-3 col-md-4 col-sm-6 p-0" onclick="location.href='{{ .Permalink }}';" style="cursor:pointer;">
                 <div class="position-relative">
@@ -87,7 +87,7 @@
                 <h2 class="section-title section-title-border-gray">Latest Blog</h2>
             </div>
 
-            {{ range $index, $element:= where .Data.Pages "Type" "post" }}
+            {{ range $index, $element:= where .Site.RegularPages "Type" "post" }}
             {{ if lt $index 3}}
             {{ "<!-- blog-item -->" | safeHTML }}
             <div class="col-lg-4 col-sm-6 mb-4" onclick="location.href='{{ .Permalink }}';" style="cursor:pointer;">

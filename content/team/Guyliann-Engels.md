@@ -10,10 +10,10 @@ linkedinURL : 'https://www.linkedin.com/in/guyliannengels'
 #googlePlusURL : '#'
 #projectDone : 32
 #successRate : 96%
-experienceOf : 2 Years
+experienceOf : 3 Years
 from : Mons. Belgium
-homePageLabel: 'www.guyliann.be'
-homePageURL : 'http://www.guyliann.be'
+homePageLabel: 'guyliann.netlify.app'
+homePageURL : 'https://guyliann.netlify.app/en/'
 phone : +32 65 37 34 78
 email : guyliann.engels@umons.ac.be
 location : Mons, Belgium.
