@@ -34,7 +34,7 @@ tags:
 
 > Configuration of your [SciViews Box](https://www.sciviews.org/software/svbox/) should be done preferrably through its **configuration** dialog box that you got by clicking on the `Sv` icon at the top right. You get everything here to parameterize and customize its main aspects (for more customization, go to the `Applications` menu -> `Settings`).
 
-![An exemple if SciViews Box applications installation and reinstallation.](../../images/svbox/svbox-sv-icon.png)
+![An example of SciViews Box applications installation and reinstallation.](../../images/svbox/svbox-sv-icon.png)
 
 Note that, if you don't see the `Sv` icon at the top right in your SciViews Box, it means it is not correctly preinstalled. Install the **Last Update** from the link at left. If you don't how to do, see [SciViews Box Applications](../apps).
 

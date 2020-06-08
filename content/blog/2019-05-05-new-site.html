@@ -170,24 +170,24 @@ and this approach is the only way to do it in tables!</p></li>
 <div id="lists" class="section level3">
 <h3>Lists</h3>
 <ul>
-<li>Unordered list (using <code>*</code>, <code>+</code> or <code>-</code>)
+<li><p>Unordered list (using <code>*</code>, <code>+</code> or <code>-</code>)</p>
 <ul>
 <li>Second level</li>
 </ul></li>
-<li>Compact</li>
-<li>list</li>
+<li><p>Compact</p></li>
+<li><p>list</p></li>
 <li><p>of items</p></li>
 <li><p>Loose</p></li>
 <li><p>list</p></li>
 <li><p>of items</p></li>
 </ul>
 <ol style="list-style-type: decimal">
-<li>Ordered list
+<li><p>Ordered list</p>
 <ol style="list-style-type: lower-alpha">
 <li>Second level</li>
 <li>Second level, second item</li>
 </ol></li>
-<li>Back to first level</li>
+<li><p>Back to first level</p></li>
 <li><p>There is a mechanism to include paragraphs inside the list using indentation (don’t forget the empty line in between to start a new paragraph):</p>
 <pre><code>Some preformatted inside a list item</code></pre></li>
 <li><p>Fourth item</p></li>
@@ -251,7 +251,7 @@ and this approach is the only way to do it in tables!</p></li>
 </ol>
 <p>Finally, to force ending a list, just add a comment where you want to end it (same trick applies for restarting another numbered list):</p>
 <ol style="list-style-type: decimal">
-<li>list item</li>
+<li><p>list item</p></li>
 <li><p>another item</p>
 <p>Formatted block with spaces does not work inside lists</p></li>
 <li><p>third list item</p></li>
@@ -277,12 +277,12 @@ pi * radius ^ 2</code></pre>
 <li>To insert images in your document, you use:</li>
 </ul>
 <div class="figure">
-<img src="../../figures/markdown_cat.jpg" alt="A nice little cat." />
+<img src="../../figures/markdown_cat.jpg" alt="" />
 <p class="caption">A nice little cat.</p>
 </div>
 <!-- Of course, you can also link to an image on the Internet: -->
 <div class="figure">
-<img src="https://www.r-project.org/logo/Rlogo.png" alt="The official R logo." />
+<img src="https://www.r-project.org/logo/Rlogo.png" alt="" />
 <p class="caption">The official R logo.</p>
 </div>
 <p>An inline image: <img src="../../figures/svbox.png" alt="A small SciViews Box logo." />. Note here that when an image appears alone in its line, it is interpreted as a figure (possibly with caption), and otherwise, it is interpeted as an inline image.</p>
@@ -672,8 +672,8 @@ tli.table &lt;- xtable(tli[1:10, ])
 digits(tli.table)[c(2, 6)] &lt;- 0
 ## Choose one of these!
 print(tli.table, floating = FALSE, type = &quot;html&quot;)</code></pre>
-<!-- html table generated in R 3.6.2 by xtable 1.8-4 package -->
-<!-- Sun Apr 19 18:01:32 2020 -->
+<!-- html table generated in R 3.6.3 by xtable 1.8-4 package -->
+<!-- Mon Jun  8 19:27:37 2020 -->
 <table border="1">
 <tr>
 <th>
@@ -1000,7 +1000,7 @@ mtcars %&gt;.%
 <div id="inline-r-expressions-and-special-chunks" class="section level3">
 <h3>Inline R expressions and special chunks</h3>
 <ul>
-<li><p>Inline R expression like 2, or R version 3.6.2 (2019-12-12).</p></li>
+<li><p>Inline R expression like 2, or R version 3.6.3 (2020-02-29).</p></li>
 <li><p>Rcpp code chunks can also be included in your document:</p></li>
 </ul>
 <pre class="cpp"><code>#include &lt;Rcpp.h&gt;
@@ -1025,7 +1025,7 @@ knit(&#39;R Markdown V2 Syntax.Rmd&#39;)</code></pre>
 </ul>
 <pre class="python"><code>import sys
 print(sys.version)</code></pre>
-<pre class="chunk-output"><code>## 2.7.16 (default, Feb 29 2020, 01:55:37) 
+<pre class="chunk-output"><code>## 2.7.16 (default, Apr 17 2020, 18:29:03) 
 ## [GCC 4.2.1 Compatible Apple LLVM 11.0.3 (clang-1103.0.29.20) (-macos10.15-objc-</code></pre>
 </div>
 </div>
@@ -1088,14 +1088,14 @@ nocite:
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>This is my simple footnote.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p>This is my simple footnote.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
 <li id="fn2"><p>Footnotes can span on multiple paragraphs, providing you indent them with four spaces:</p>
 <ul>
 <li>A list item</li>
 </ul>
-<p>Another paragraph belonging to the note.<a href="#fnref2" class="footnote-back">↩</a></p></li>
-<li id="fn3"><p>Inline footnotes are easier to write right in your text, but they can only span on a single paragraph.<a href="#fnref3" class="footnote-back">↩</a></p></li>
-<li id="fn4"><p>Note that you <strong>cannot</strong> include the number inside the link, unfortunately.<a href="#fnref4" class="footnote-back">↩</a></p></li>
-<li id="fn5"><p>Do <strong>not</strong> use underscore <code>_</code> in the label of your chunk to use it as a link!<a href="#fnref5" class="footnote-back">↩</a></p></li>
+<p>Another paragraph belonging to the note.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Inline footnotes are easier to write right in your text, but they can only span on a single paragraph.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Note that you <strong>cannot</strong> include the number inside the link, unfortunately.<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>Do <strong>not</strong> use underscore <code>_</code> in the label of your chunk to use it as a link!<a href="#fnref5" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>

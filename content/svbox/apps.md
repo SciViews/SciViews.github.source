@@ -40,11 +40,13 @@ To know which applications are already installed in your SciViews Box, go to the
 
 If you fail to install an application you have downloaded (for instance, if you answered **No** when you were asked for its installation), just redownload and reinstall the application.
 
+### SciViews Box 2020
+
+Applications for the SciViews Box 2020 are [here](../apps2020).
 
 ### SciViews Box 2019
 
 Applications for the SciViews Box 2019 are [here](../apps2019).
-
 
 ### SciViews Box 2018
 
