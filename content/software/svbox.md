@@ -1,21 +1,21 @@
 ---
 title: "SciViews Box"
-date: 2019-05-05T12:27:35+01:00
+date: 2021-09-19T09:40:32+01:00
 image: images/software/svbox.png
 bgImage: images/background/page-title.jpg
 icon: ti-desktop
 downloadTitle: 'Download'
-downloadLabel: 'SciViews Box 2019'
-downloadURL: 'https://filedn.com/lzGVgfOGxb6mHFQcRn9ueUb/svbox2019/'
+downloadLabel: 'SciViews Box 2021'
+downloadURL: 'https://filedn.com/lzGVgfOGxb6mHFQcRn9ueUb/svbox2021/'
 linkTitle1: 'Windows install'
-linkLabel1: 'svbox2019_win_setup.exe'
-linkURL1: 'https://go.sciviews.org/svbox2019-win'
+linkLabel1: 'svbox2021_win_setup.exe'
+linkURL1: 'https://go.sciviews.org/svbox2021-win'
 linkTitle2: 'MacOS install'
-linkLabel2: 'svbox2019_macos_setup.dmg'
-linkURL2: 'https://go.sciviews.org/svbox2019-mac'
+linkLabel2: 'svbox2021_macos_setup.dmg'
+linkURL2: 'https://go.sciviews.org/svbox2021-mac'
 linkTitle3: 'BioDataScience plugin'
-linkLabel3: 'biodatascience2.svbox2019'
-linkURL3: 'https://go.sciviews.org/BioDataScience2'
+linkLabel3: 'biodatascience.svbox2021'
+linkURL3: 'https://go.sciviews.org/BioDataScience-svbox2021'
 type : software
 author: Philippe Grosjean
 categories: 
