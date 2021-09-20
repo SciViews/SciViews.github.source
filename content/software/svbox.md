@@ -46,7 +46,7 @@ The SciViews Box is a reproducible software environment for data science providi
 
 ![Launcher](../../images/software/svbox-launcher.png)
 
-The SciViews Box Launcher is a native application on Windows, MacOS or Linux that runs on the host. It starts or stops the SciViews Box running as a virtual machine ([VirtualBox](https://www.virtualbox.org/)). It also gives direct acces to RStudio, Jupyter, JupyterLab, Adminer, or an ssh session running inside the svbox from the host.
+The SciViews Box Launcher is a native application on Windows, MacOS or Linux that runs on the host. It starts or stops the SciViews Box running as a virtual machine ([VirtualBox](https://www.virtualbox.org/)). It also gives direct access to RStudio, Jupyter, JupyterLab, Adminer, or an ssh session running inside the svbox from the host.
 
 
 ### <a name="download"></a>Download

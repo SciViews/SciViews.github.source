@@ -9,7 +9,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 copyright = "This work is licensed under a Creative Commons Attribution 4.0 International License."
 #preserveTaxonomyNames = true
 #paginate = 10
-publishDir = "../SciViews.github.io"
+publishdir = "../SciViews.github.io"
 
 # navigation
 [menu]
@@ -260,3 +260,8 @@ googleAnalitycsID = "UA-139912016-1"
     [[params.sharePost]]
     icon = "ti-email"
     preURL = "#"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
